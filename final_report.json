@@ -1,0 +1,281 @@
+{
+  "summary": {
+    "total_tests": 10,
+    "passed": 0,
+    "failed": 10,
+    "success_rate": 0.0
+  },
+  "detailed_results": [
+    {
+      "test": {
+        "test_id": 5,
+        "test_name": "Division by Zero",
+        "description": "Test division by zero handling",
+        "executor_agent": 1,
+        "status": "failed",
+        "error": "Message: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=140.0.7339.208)\nStacktrace:\n\tGetHandleVerifier [0x0x7ff6d9c81eb5+80197]\n\tGetHandleVerifier [0x0x7ff6d9c81f10+80288]\n\t(No symbol) [0x0x7ff6d9a002fa]\n\t(No symbol) [0x0x7ff6d99d82a1]\n\t(No symbol) [0x0x7ff6d9a8799e]\n\t(No symbol) [0x0x7ff6d9aa8132]\n\t(No symbol) [0x0x7ff6d9a80153]\n\t(No symbol) [0x0x7ff6d9a48b02]\n\t(No symbol) [0x0x7ff6d9a498d3]\n\tGetHandleVerifier [0x0x7ff6d9f3e83d+2949837]\n\tGetHandleVerifier [0x0x7ff6d9f38c6a+2926330]\n\tGetHandleVerifier [0x0x7ff6d9f586c7+3055959]\n\tGetHandleVerifier [0x0x7ff6d9c9cfee+191102]\n\tGetHandleVerifier [0x0x7ff6d9ca50af+224063]\n\tGetHandleVerifier [0x0x7ff6d9c8af64+117236]\n\tGetHandleVerifier [0x0x7ff6d9c8b119+117673]\n\tGetHandleVerifier [0x0x7ff6d9c710a8+11064]\n\tBaseThreadInitThunk [0x0x7ffd7da1e8d7+23]\n\tRtlUserThreadStart [0x0x7ffd7efe8d9c+44]\n",
+        "timestamp": "2025-09-26 20:49:00"
+      },
+      "validation": {
+        "verdict": "fail",
+        "evidence": [
+          "\u274c Test failed: Message: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=140.0.7339.208)\nStacktrace:\n\tGetHandleVerifier [0x0x7ff6d9c81eb5+80197]\n\tGetHandleVerifier [0x0x7ff6d9c81f10+80288]\n\t(No symbol) [0x0x7ff6d9a002fa]\n\t(No symbol) [0x0x7ff6d99d82a1]\n\t(No symbol) [0x0x7ff6d9a8799e]\n\t(No symbol) [0x0x7ff6d9aa8132]\n\t(No symbol) [0x0x7ff6d9a80153]\n\t(No symbol) [0x0x7ff6d9a48b02]\n\t(No symbol) [0x0x7ff6d9a498d3]\n\tGetHandleVerifier [0x0x7ff6d9f3e83d+2949837]\n\tGetHandleVerifier [0x0x7ff6d9f38c6a+2926330]\n\tGetHandleVerifier [0x0x7ff6d9f586c7+3055959]\n\tGetHandleVerifier [0x0x7ff6d9c9cfee+191102]\n\tGetHandleVerifier [0x0x7ff6d9ca50af+224063]\n\tGetHandleVerifier [0x0x7ff6d9c8af64+117236]\n\tGetHandleVerifier [0x0x7ff6d9c8b119+117673]\n\tGetHandleVerifier [0x0x7ff6d9c710a8+11064]\n\tBaseThreadInitThunk [0x0x7ffd7da1e8d7+23]\n\tRtlUserThreadStart [0x0x7ffd7efe8d9c+44]\n",
+          "\u274c No artifacts found",
+          "\u2139\ufe0f Cross-agent: No similar tests for comparison",
+          "\u26a0\ufe0f Repeat validation: Failed in 3/3 simulated reruns"
+        ],
+        "reproducibility": "1/1",
+        "triage_notes": [
+          "\ud83d\udea8 PRIORITY: Test failure requires investigation",
+          "\ud83d\udd27 Assigned to: QA Team #3",
+          "\ud83d\udccb Action: Review artifacts and debug",
+          "\ud83d\udca1 Hint: Check error handling for division by zero"
+        ],
+        "validation_timestamp": "2025-09-26 20:49:16"
+      }
+    },
+    {
+      "test": {
+        "test_id": 1,
+        "test_name": "Basic Addition",
+        "description": "Test simple addition operation",
+        "executor_agent": 2,
+        "status": "failed",
+        "error": "Message: invalid session id: session deleted as the browser has closed the connection\nfrom disconnected: not connected to DevTools\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception\nStacktrace:\n\tGetHandleVerifier [0x0x7ff6d9c81eb5+80197]\n\tGetHandleVerifier [0x0x7ff6d9c81f10+80288]\n\t(No symbol) [0x0x7ff6d9a002fa]\n\t(No symbol) [0x0x7ff6d99ec0a5]\n\t(No symbol) [0x0x7ff6d9a1144a]\n\t(No symbol) [0x0x7ff6d9a87be6]\n\t(No symbol) [0x0x7ff6d9aa8132]\n\t(No symbol) [0x0x7ff6d9a80153]\n\t(No symbol) [0x0x7ff6d9a48b02]\n\t(No symbol) [0x0x7ff6d9a498d3]\n\tGetHandleVerifier [0x0x7ff6d9f3e83d+2949837]\n\tGetHandleVerifier [0x0x7ff6d9f38c6a+2926330]\n\tGetHandleVerifier [0x0x7ff6d9f586c7+3055959]\n\tGetHandleVerifier [0x0x7ff6d9c9cfee+191102]\n\tGetHandleVerifier [0x0x7ff6d9ca50af+224063]\n\tGetHandleVerifier [0x0x7ff6d9c8af64+117236]\n\tGetHandleVerifier [0x0x7ff6d9c8b119+117673]\n\tGetHandleVerifier [0x0x7ff6d9c710a8+11064]\n\tBaseThreadInitThunk [0x0x7ffd7da1e8d7+23]\n\tRtlUserThreadStart [0x0x7ffd7efe8d9c+44]\n",
+        "timestamp": "2025-09-26 20:49:01"
+      },
+      "validation": {
+        "verdict": "fail",
+        "evidence": [
+          "\u274c Test failed: Message: invalid session id: session deleted as the browser has closed the connection\nfrom disconnected: not connected to DevTools\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception\nStacktrace:\n\tGetHandleVerifier [0x0x7ff6d9c81eb5+80197]\n\tGetHandleVerifier [0x0x7ff6d9c81f10+80288]\n\t(No symbol) [0x0x7ff6d9a002fa]\n\t(No symbol) [0x0x7ff6d99ec0a5]\n\t(No symbol) [0x0x7ff6d9a1144a]\n\t(No symbol) [0x0x7ff6d9a87be6]\n\t(No symbol) [0x0x7ff6d9aa8132]\n\t(No symbol) [0x0x7ff6d9a80153]\n\t(No symbol) [0x0x7ff6d9a48b02]\n\t(No symbol) [0x0x7ff6d9a498d3]\n\tGetHandleVerifier [0x0x7ff6d9f3e83d+2949837]\n\tGetHandleVerifier [0x0x7ff6d9f38c6a+2926330]\n\tGetHandleVerifier [0x0x7ff6d9f586c7+3055959]\n\tGetHandleVerifier [0x0x7ff6d9c9cfee+191102]\n\tGetHandleVerifier [0x0x7ff6d9ca50af+224063]\n\tGetHandleVerifier [0x0x7ff6d9c8af64+117236]\n\tGetHandleVerifier [0x0x7ff6d9c8b119+117673]\n\tGetHandleVerifier [0x0x7ff6d9c710a8+11064]\n\tBaseThreadInitThunk [0x0x7ffd7da1e8d7+23]\n\tRtlUserThreadStart [0x0x7ffd7efe8d9c+44]\n",
+          "\u274c No artifacts found",
+          "\u2139\ufe0f Cross-agent: No similar tests for comparison",
+          "\u26a0\ufe0f Repeat validation: Failed in 3/3 simulated reruns"
+        ],
+        "reproducibility": "1/1",
+        "triage_notes": [
+          "\ud83d\udea8 PRIORITY: Test failure requires investigation",
+          "\ud83d\udd27 Assigned to: QA Team #2",
+          "\ud83d\udccb Action: Review artifacts and debug"
+        ],
+        "validation_timestamp": "2025-09-26 20:49:16"
+      }
+    },
+    {
+      "test": {
+        "test_id": 2,
+        "test_name": "Subtraction Test",
+        "description": "Test subtraction functionality",
+        "executor_agent": 3,
+        "status": "failed",
+        "error": "Message: invalid session id: session deleted as the browser has closed the connection\nfrom disconnected: not connected to DevTools\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception\nStacktrace:\n\tGetHandleVerifier [0x0x7ff6d9c81eb5+80197]\n\tGetHandleVerifier [0x0x7ff6d9c81f10+80288]\n\t(No symbol) [0x0x7ff6d9a002fa]\n\t(No symbol) [0x0x7ff6d99ec0a5]\n\t(No symbol) [0x0x7ff6d9a1144a]\n\t(No symbol) [0x0x7ff6d9a87be6]\n\t(No symbol) [0x0x7ff6d9aa8132]\n\t(No symbol) [0x0x7ff6d9a80153]\n\t(No symbol) [0x0x7ff6d9a48b02]\n\t(No symbol) [0x0x7ff6d9a498d3]\n\tGetHandleVerifier [0x0x7ff6d9f3e83d+2949837]\n\tGetHandleVerifier [0x0x7ff6d9f38c6a+2926330]\n\tGetHandleVerifier [0x0x7ff6d9f586c7+3055959]\n\tGetHandleVerifier [0x0x7ff6d9c9cfee+191102]\n\tGetHandleVerifier [0x0x7ff6d9ca50af+224063]\n\tGetHandleVerifier [0x0x7ff6d9c8af64+117236]\n\tGetHandleVerifier [0x0x7ff6d9c8b119+117673]\n\tGetHandleVerifier [0x0x7ff6d9c710a8+11064]\n\tBaseThreadInitThunk [0x0x7ffd7da1e8d7+23]\n\tRtlUserThreadStart [0x0x7ffd7efe8d9c+44]\n",
+        "timestamp": "2025-09-26 20:49:02"
+      },
+      "validation": {
+        "verdict": "fail",
+        "evidence": [
+          "\u274c Test failed: Message: invalid session id: session deleted as the browser has closed the connection\nfrom disconnected: not connected to DevTools\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception\nStacktrace:\n\tGetHandleVerifier [0x0x7ff6d9c81eb5+80197]\n\tGetHandleVerifier [0x0x7ff6d9c81f10+80288]\n\t(No symbol) [0x0x7ff6d9a002fa]\n\t(No symbol) [0x0x7ff6d99ec0a5]\n\t(No symbol) [0x0x7ff6d9a1144a]\n\t(No symbol) [0x0x7ff6d9a87be6]\n\t(No symbol) [0x0x7ff6d9aa8132]\n\t(No symbol) [0x0x7ff6d9a80153]\n\t(No symbol) [0x0x7ff6d9a48b02]\n\t(No symbol) [0x0x7ff6d9a498d3]\n\tGetHandleVerifier [0x0x7ff6d9f3e83d+2949837]\n\tGetHandleVerifier [0x0x7ff6d9f38c6a+2926330]\n\tGetHandleVerifier [0x0x7ff6d9f586c7+3055959]\n\tGetHandleVerifier [0x0x7ff6d9c9cfee+191102]\n\tGetHandleVerifier [0x0x7ff6d9ca50af+224063]\n\tGetHandleVerifier [0x0x7ff6d9c8af64+117236]\n\tGetHandleVerifier [0x0x7ff6d9c8b119+117673]\n\tGetHandleVerifier [0x0x7ff6d9c710a8+11064]\n\tBaseThreadInitThunk [0x0x7ffd7da1e8d7+23]\n\tRtlUserThreadStart [0x0x7ffd7efe8d9c+44]\n",
+          "\u274c No artifacts found",
+          "\u2139\ufe0f Cross-agent: No similar tests for comparison",
+          "\u26a0\ufe0f Repeat validation: Failed in 3/3 simulated reruns"
+        ],
+        "reproducibility": "1/1",
+        "triage_notes": [
+          "\ud83d\udea8 PRIORITY: Test failure requires investigation",
+          "\ud83d\udd27 Assigned to: QA Team #3",
+          "\ud83d\udccb Action: Review artifacts and debug"
+        ],
+        "validation_timestamp": "2025-09-26 20:49:16"
+      }
+    },
+    {
+      "test": {
+        "test_id": 3,
+        "test_name": "Multiplication",
+        "description": "Test multiplication operations",
+        "executor_agent": 1,
+        "status": "failed",
+        "error": "Message: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=140.0.7339.208)\nStacktrace:\n\tGetHandleVerifier [0x0x7ff6d9c81eb5+80197]\n\tGetHandleVerifier [0x0x7ff6d9c81f10+80288]\n\t(No symbol) [0x0x7ff6d9a002fa]\n\t(No symbol) [0x0x7ff6d99d82a1]\n\t(No symbol) [0x0x7ff6d9a8799e]\n\t(No symbol) [0x0x7ff6d9aa8132]\n\t(No symbol) [0x0x7ff6d9a80153]\n\t(No symbol) [0x0x7ff6d9a48b02]\n\t(No symbol) [0x0x7ff6d9a498d3]\n\tGetHandleVerifier [0x0x7ff6d9f3e83d+2949837]\n\tGetHandleVerifier [0x0x7ff6d9f38c6a+2926330]\n\tGetHandleVerifier [0x0x7ff6d9f586c7+3055959]\n\tGetHandleVerifier [0x0x7ff6d9c9cfee+191102]\n\tGetHandleVerifier [0x0x7ff6d9ca50af+224063]\n\tGetHandleVerifier [0x0x7ff6d9c8af64+117236]\n\tGetHandleVerifier [0x0x7ff6d9c8b119+117673]\n\tGetHandleVerifier [0x0x7ff6d9c710a8+11064]\n\tBaseThreadInitThunk [0x0x7ffd7da1e8d7+23]\n\tRtlUserThreadStart [0x0x7ffd7efe8d9c+44]\n",
+        "timestamp": "2025-09-26 20:49:03"
+      },
+      "validation": {
+        "verdict": "fail",
+        "evidence": [
+          "\u274c Test failed: Message: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=140.0.7339.208)\nStacktrace:\n\tGetHandleVerifier [0x0x7ff6d9c81eb5+80197]\n\tGetHandleVerifier [0x0x7ff6d9c81f10+80288]\n\t(No symbol) [0x0x7ff6d9a002fa]\n\t(No symbol) [0x0x7ff6d99d82a1]\n\t(No symbol) [0x0x7ff6d9a8799e]\n\t(No symbol) [0x0x7ff6d9aa8132]\n\t(No symbol) [0x0x7ff6d9a80153]\n\t(No symbol) [0x0x7ff6d9a48b02]\n\t(No symbol) [0x0x7ff6d9a498d3]\n\tGetHandleVerifier [0x0x7ff6d9f3e83d+2949837]\n\tGetHandleVerifier [0x0x7ff6d9f38c6a+2926330]\n\tGetHandleVerifier [0x0x7ff6d9f586c7+3055959]\n\tGetHandleVerifier [0x0x7ff6d9c9cfee+191102]\n\tGetHandleVerifier [0x0x7ff6d9ca50af+224063]\n\tGetHandleVerifier [0x0x7ff6d9c8af64+117236]\n\tGetHandleVerifier [0x0x7ff6d9c8b119+117673]\n\tGetHandleVerifier [0x0x7ff6d9c710a8+11064]\n\tBaseThreadInitThunk [0x0x7ffd7da1e8d7+23]\n\tRtlUserThreadStart [0x0x7ffd7efe8d9c+44]\n",
+          "\u274c No artifacts found",
+          "\u2139\ufe0f Cross-agent: No similar tests for comparison",
+          "\u26a0\ufe0f Repeat validation: Failed in 3/3 simulated reruns"
+        ],
+        "reproducibility": "1/1",
+        "triage_notes": [
+          "\ud83d\udea8 PRIORITY: Test failure requires investigation",
+          "\ud83d\udd27 Assigned to: QA Team #1",
+          "\ud83d\udccb Action: Review artifacts and debug"
+        ],
+        "validation_timestamp": "2025-09-26 20:49:16"
+      }
+    },
+    {
+      "test": {
+        "test_id": 4,
+        "test_name": "Division",
+        "description": "Test division functionality",
+        "executor_agent": 2,
+        "status": "failed",
+        "error": "Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception\nStacktrace:\n\tGetHandleVerifier [0x0x7ff6d9c81eb5+80197]\n\tGetHandleVerifier [0x0x7ff6d9c81f10+80288]\n\t(No symbol) [0x0x7ff6d9a0011c]\n\t(No symbol) [0x0x7ff6d9a47c1d]\n\t(No symbol) [0x0x7ff6d9a80242]\n\t(No symbol) [0x0x7ff6d9a7ac14]\n\t(No symbol) [0x0x7ff6d9a79cca]\n\t(No symbol) [0x0x7ff6d99ca755]\n\tGetHandleVerifier [0x0x7ff6d9f3e83d+2949837]\n\tGetHandleVerifier [0x0x7ff6d9f38c6a+2926330]\n\tGetHandleVerifier [0x0x7ff6d9f586c7+3055959]\n\tGetHandleVerifier [0x0x7ff6d9c9cfee+191102]\n\tGetHandleVerifier [0x0x7ff6d9ca50af+224063]\n\t(No symbol) [0x0x7ff6d99c9731]\n\tGetHandleVerifier [0x0x7ff6da06b568+4182008]\n\tBaseThreadInitThunk [0x0x7ffd7da1e8d7+23]\n\tRtlUserThreadStart [0x0x7ffd7efe8d9c+44]\n",
+        "timestamp": "2025-09-26 20:49:04"
+      },
+      "validation": {
+        "verdict": "fail",
+        "evidence": [
+          "\u274c Test failed: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception\nStacktrace:\n\tGetHandleVerifier [0x0x7ff6d9c81eb5+80197]\n\tGetHandleVerifier [0x0x7ff6d9c81f10+80288]\n\t(No symbol) [0x0x7ff6d9a0011c]\n\t(No symbol) [0x0x7ff6d9a47c1d]\n\t(No symbol) [0x0x7ff6d9a80242]\n\t(No symbol) [0x0x7ff6d9a7ac14]\n\t(No symbol) [0x0x7ff6d9a79cca]\n\t(No symbol) [0x0x7ff6d99ca755]\n\tGetHandleVerifier [0x0x7ff6d9f3e83d+2949837]\n\tGetHandleVerifier [0x0x7ff6d9f38c6a+2926330]\n\tGetHandleVerifier [0x0x7ff6d9f586c7+3055959]\n\tGetHandleVerifier [0x0x7ff6d9c9cfee+191102]\n\tGetHandleVerifier [0x0x7ff6d9ca50af+224063]\n\t(No symbol) [0x0x7ff6d99c9731]\n\tGetHandleVerifier [0x0x7ff6da06b568+4182008]\n\tBaseThreadInitThunk [0x0x7ffd7da1e8d7+23]\n\tRtlUserThreadStart [0x0x7ffd7efe8d9c+44]\n",
+          "\u274c No artifacts found",
+          "\u2139\ufe0f Cross-agent: No similar tests for comparison",
+          "\u26a0\ufe0f Repeat validation: Failed in 3/3 simulated reruns"
+        ],
+        "reproducibility": "1/1",
+        "triage_notes": [
+          "\ud83d\udea8 PRIORITY: Test failure requires investigation",
+          "\ud83d\udd27 Assigned to: QA Team #2",
+          "\ud83d\udccb Action: Review artifacts and debug"
+        ],
+        "validation_timestamp": "2025-09-26 20:49:16"
+      }
+    },
+    {
+      "test": {
+        "test_id": 13,
+        "test_name": "Basic \u00f7 Operation",
+        "description": "Test \u00f7 operation with basic scenario",
+        "executor_agent": 3,
+        "status": "failed",
+        "error": "Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception\nStacktrace:\n\tGetHandleVerifier [0x0x7ff6d9c81eb5+80197]\n\tGetHandleVerifier [0x0x7ff6d9c81f10+80288]\n\t(No symbol) [0x0x7ff6d9a0011c]\n\t(No symbol) [0x0x7ff6d9a47c1d]\n\t(No symbol) [0x0x7ff6d9a80242]\n\t(No symbol) [0x0x7ff6d9a7ac14]\n\t(No symbol) [0x0x7ff6d9a79cca]\n\t(No symbol) [0x0x7ff6d99ca755]\n\tGetHandleVerifier [0x0x7ff6d9f3e83d+2949837]\n\tGetHandleVerifier [0x0x7ff6d9f38c6a+2926330]\n\tGetHandleVerifier [0x0x7ff6d9f586c7+3055959]\n\tGetHandleVerifier [0x0x7ff6d9c9cfee+191102]\n\tGetHandleVerifier [0x0x7ff6d9ca50af+224063]\n\t(No symbol) [0x0x7ff6d99c9731]\n\tGetHandleVerifier [0x0x7ff6da06b568+4182008]\n\tBaseThreadInitThunk [0x0x7ffd7da1e8d7+23]\n\tRtlUserThreadStart [0x0x7ffd7efe8d9c+44]\n",
+        "timestamp": "2025-09-26 20:49:05"
+      },
+      "validation": {
+        "verdict": "fail",
+        "evidence": [
+          "\u274c Test failed: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception\nStacktrace:\n\tGetHandleVerifier [0x0x7ff6d9c81eb5+80197]\n\tGetHandleVerifier [0x0x7ff6d9c81f10+80288]\n\t(No symbol) [0x0x7ff6d9a0011c]\n\t(No symbol) [0x0x7ff6d9a47c1d]\n\t(No symbol) [0x0x7ff6d9a80242]\n\t(No symbol) [0x0x7ff6d9a7ac14]\n\t(No symbol) [0x0x7ff6d9a79cca]\n\t(No symbol) [0x0x7ff6d99ca755]\n\tGetHandleVerifier [0x0x7ff6d9f3e83d+2949837]\n\tGetHandleVerifier [0x0x7ff6d9f38c6a+2926330]\n\tGetHandleVerifier [0x0x7ff6d9f586c7+3055959]\n\tGetHandleVerifier [0x0x7ff6d9c9cfee+191102]\n\tGetHandleVerifier [0x0x7ff6d9ca50af+224063]\n\t(No symbol) [0x0x7ff6d99c9731]\n\tGetHandleVerifier [0x0x7ff6da06b568+4182008]\n\tBaseThreadInitThunk [0x0x7ffd7da1e8d7+23]\n\tRtlUserThreadStart [0x0x7ffd7efe8d9c+44]\n",
+          "\u274c No artifacts found",
+          "\u2139\ufe0f Cross-agent: No similar tests for comparison",
+          "\u26a0\ufe0f Repeat validation: Failed in 3/3 simulated reruns"
+        ],
+        "reproducibility": "1/1",
+        "triage_notes": [
+          "\ud83d\udea8 PRIORITY: Test failure requires investigation",
+          "\ud83d\udd27 Assigned to: QA Team #2",
+          "\ud83d\udccb Action: Review artifacts and debug"
+        ],
+        "validation_timestamp": "2025-09-26 20:49:16"
+      }
+    },
+    {
+      "test": {
+        "test_id": 14,
+        "test_name": "Advanced + Operation",
+        "description": "Test + operation with advanced scenario",
+        "executor_agent": 1,
+        "status": "failed",
+        "error": "Message: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=140.0.7339.208)\nStacktrace:\n\tGetHandleVerifier [0x0x7ff6d9c81eb5+80197]\n\tGetHandleVerifier [0x0x7ff6d9c81f10+80288]\n\t(No symbol) [0x0x7ff6d9a002fa]\n\t(No symbol) [0x0x7ff6d99d82a1]\n\t(No symbol) [0x0x7ff6d9a8799e]\n\t(No symbol) [0x0x7ff6d9aa8132]\n\t(No symbol) [0x0x7ff6d9a80153]\n\t(No symbol) [0x0x7ff6d9a48b02]\n\t(No symbol) [0x0x7ff6d9a498d3]\n\tGetHandleVerifier [0x0x7ff6d9f3e83d+2949837]\n\tGetHandleVerifier [0x0x7ff6d9f38c6a+2926330]\n\tGetHandleVerifier [0x0x7ff6d9f586c7+3055959]\n\tGetHandleVerifier [0x0x7ff6d9c9cfee+191102]\n\tGetHandleVerifier [0x0x7ff6d9ca50af+224063]\n\tGetHandleVerifier [0x0x7ff6d9c8af64+117236]\n\tGetHandleVerifier [0x0x7ff6d9c8b119+117673]\n\tGetHandleVerifier [0x0x7ff6d9c710a8+11064]\n\tBaseThreadInitThunk [0x0x7ffd7da1e8d7+23]\n\tRtlUserThreadStart [0x0x7ffd7efe8d9c+44]\n",
+        "timestamp": "2025-09-26 20:49:06"
+      },
+      "validation": {
+        "verdict": "fail",
+        "evidence": [
+          "\u274c Test failed: Message: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=140.0.7339.208)\nStacktrace:\n\tGetHandleVerifier [0x0x7ff6d9c81eb5+80197]\n\tGetHandleVerifier [0x0x7ff6d9c81f10+80288]\n\t(No symbol) [0x0x7ff6d9a002fa]\n\t(No symbol) [0x0x7ff6d99d82a1]\n\t(No symbol) [0x0x7ff6d9a8799e]\n\t(No symbol) [0x0x7ff6d9aa8132]\n\t(No symbol) [0x0x7ff6d9a80153]\n\t(No symbol) [0x0x7ff6d9a48b02]\n\t(No symbol) [0x0x7ff6d9a498d3]\n\tGetHandleVerifier [0x0x7ff6d9f3e83d+2949837]\n\tGetHandleVerifier [0x0x7ff6d9f38c6a+2926330]\n\tGetHandleVerifier [0x0x7ff6d9f586c7+3055959]\n\tGetHandleVerifier [0x0x7ff6d9c9cfee+191102]\n\tGetHandleVerifier [0x0x7ff6d9ca50af+224063]\n\tGetHandleVerifier [0x0x7ff6d9c8af64+117236]\n\tGetHandleVerifier [0x0x7ff6d9c8b119+117673]\n\tGetHandleVerifier [0x0x7ff6d9c710a8+11064]\n\tBaseThreadInitThunk [0x0x7ffd7da1e8d7+23]\n\tRtlUserThreadStart [0x0x7ffd7efe8d9c+44]\n",
+          "\u274c No artifacts found",
+          "\u2139\ufe0f Cross-agent: No similar tests for comparison",
+          "\u26a0\ufe0f Repeat validation: Failed in 3/3 simulated reruns"
+        ],
+        "reproducibility": "1/1",
+        "triage_notes": [
+          "\ud83d\udea8 PRIORITY: Test failure requires investigation",
+          "\ud83d\udd27 Assigned to: QA Team #3",
+          "\ud83d\udccb Action: Review artifacts and debug"
+        ],
+        "validation_timestamp": "2025-09-26 20:49:16"
+      }
+    },
+    {
+      "test": {
+        "test_id": 15,
+        "test_name": "Complex - Operation",
+        "description": "Test - operation with complex scenario",
+        "executor_agent": 2,
+        "status": "failed",
+        "error": "Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception\nStacktrace:\n\tGetHandleVerifier [0x0x7ff6d9c81eb5+80197]\n\tGetHandleVerifier [0x0x7ff6d9c81f10+80288]\n\t(No symbol) [0x0x7ff6d9a0011c]\n\t(No symbol) [0x0x7ff6d9a47c1d]\n\t(No symbol) [0x0x7ff6d9a80242]\n\t(No symbol) [0x0x7ff6d9a7ac14]\n\t(No symbol) [0x0x7ff6d9a79cca]\n\t(No symbol) [0x0x7ff6d99ca755]\n\tGetHandleVerifier [0x0x7ff6d9f3e83d+2949837]\n\tGetHandleVerifier [0x0x7ff6d9f38c6a+2926330]\n\tGetHandleVerifier [0x0x7ff6d9f586c7+3055959]\n\tGetHandleVerifier [0x0x7ff6d9c9cfee+191102]\n\tGetHandleVerifier [0x0x7ff6d9ca50af+224063]\n\t(No symbol) [0x0x7ff6d99c9731]\n\tGetHandleVerifier [0x0x7ff6da06b568+4182008]\n\tBaseThreadInitThunk [0x0x7ffd7da1e8d7+23]\n\tRtlUserThreadStart [0x0x7ffd7efe8d9c+44]\n",
+        "timestamp": "2025-09-26 20:49:07"
+      },
+      "validation": {
+        "verdict": "fail",
+        "evidence": [
+          "\u274c Test failed: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception\nStacktrace:\n\tGetHandleVerifier [0x0x7ff6d9c81eb5+80197]\n\tGetHandleVerifier [0x0x7ff6d9c81f10+80288]\n\t(No symbol) [0x0x7ff6d9a0011c]\n\t(No symbol) [0x0x7ff6d9a47c1d]\n\t(No symbol) [0x0x7ff6d9a80242]\n\t(No symbol) [0x0x7ff6d9a7ac14]\n\t(No symbol) [0x0x7ff6d9a79cca]\n\t(No symbol) [0x0x7ff6d99ca755]\n\tGetHandleVerifier [0x0x7ff6d9f3e83d+2949837]\n\tGetHandleVerifier [0x0x7ff6d9f38c6a+2926330]\n\tGetHandleVerifier [0x0x7ff6d9f586c7+3055959]\n\tGetHandleVerifier [0x0x7ff6d9c9cfee+191102]\n\tGetHandleVerifier [0x0x7ff6d9ca50af+224063]\n\t(No symbol) [0x0x7ff6d99c9731]\n\tGetHandleVerifier [0x0x7ff6da06b568+4182008]\n\tBaseThreadInitThunk [0x0x7ffd7da1e8d7+23]\n\tRtlUserThreadStart [0x0x7ffd7efe8d9c+44]\n",
+          "\u274c No artifacts found",
+          "\u2139\ufe0f Cross-agent: No similar tests for comparison",
+          "\u26a0\ufe0f Repeat validation: Failed in 3/3 simulated reruns"
+        ],
+        "reproducibility": "1/1",
+        "triage_notes": [
+          "\ud83d\udea8 PRIORITY: Test failure requires investigation",
+          "\ud83d\udd27 Assigned to: QA Team #1",
+          "\ud83d\udccb Action: Review artifacts and debug"
+        ],
+        "validation_timestamp": "2025-09-26 20:49:16"
+      }
+    },
+    {
+      "test": {
+        "test_id": 19,
+        "test_name": "Advanced - Operation",
+        "description": "Test - operation with advanced scenario",
+        "executor_agent": 3,
+        "status": "failed",
+        "error": "Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception\nStacktrace:\n\tGetHandleVerifier [0x0x7ff6d9c81eb5+80197]\n\tGetHandleVerifier [0x0x7ff6d9c81f10+80288]\n\t(No symbol) [0x0x7ff6d9a0011c]\n\t(No symbol) [0x0x7ff6d9a47c1d]\n\t(No symbol) [0x0x7ff6d9a80242]\n\t(No symbol) [0x0x7ff6d9a7ac14]\n\t(No symbol) [0x0x7ff6d9a79cca]\n\t(No symbol) [0x0x7ff6d99ca755]\n\tGetHandleVerifier [0x0x7ff6d9f3e83d+2949837]\n\tGetHandleVerifier [0x0x7ff6d9f38c6a+2926330]\n\tGetHandleVerifier [0x0x7ff6d9f586c7+3055959]\n\tGetHandleVerifier [0x0x7ff6d9c9cfee+191102]\n\tGetHandleVerifier [0x0x7ff6d9ca50af+224063]\n\t(No symbol) [0x0x7ff6d99c9731]\n\tGetHandleVerifier [0x0x7ff6da06b568+4182008]\n\tBaseThreadInitThunk [0x0x7ffd7da1e8d7+23]\n\tRtlUserThreadStart [0x0x7ffd7efe8d9c+44]\n",
+        "timestamp": "2025-09-26 20:49:08"
+      },
+      "validation": {
+        "verdict": "fail",
+        "evidence": [
+          "\u274c Test failed: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception\nStacktrace:\n\tGetHandleVerifier [0x0x7ff6d9c81eb5+80197]\n\tGetHandleVerifier [0x0x7ff6d9c81f10+80288]\n\t(No symbol) [0x0x7ff6d9a0011c]\n\t(No symbol) [0x0x7ff6d9a47c1d]\n\t(No symbol) [0x0x7ff6d9a80242]\n\t(No symbol) [0x0x7ff6d9a7ac14]\n\t(No symbol) [0x0x7ff6d9a79cca]\n\t(No symbol) [0x0x7ff6d99ca755]\n\tGetHandleVerifier [0x0x7ff6d9f3e83d+2949837]\n\tGetHandleVerifier [0x0x7ff6d9f38c6a+2926330]\n\tGetHandleVerifier [0x0x7ff6d9f586c7+3055959]\n\tGetHandleVerifier [0x0x7ff6d9c9cfee+191102]\n\tGetHandleVerifier [0x0x7ff6d9ca50af+224063]\n\t(No symbol) [0x0x7ff6d99c9731]\n\tGetHandleVerifier [0x0x7ff6da06b568+4182008]\n\tBaseThreadInitThunk [0x0x7ffd7da1e8d7+23]\n\tRtlUserThreadStart [0x0x7ffd7efe8d9c+44]\n",
+          "\u274c No artifacts found",
+          "\u2139\ufe0f Cross-agent: No similar tests for comparison",
+          "\u26a0\ufe0f Repeat validation: Failed in 3/3 simulated reruns"
+        ],
+        "reproducibility": "1/1",
+        "triage_notes": [
+          "\ud83d\udea8 PRIORITY: Test failure requires investigation",
+          "\ud83d\udd27 Assigned to: QA Team #2",
+          "\ud83d\udccb Action: Review artifacts and debug"
+        ],
+        "validation_timestamp": "2025-09-26 20:49:16"
+      }
+    },
+    {
+      "test": {
+        "test_id": 21,
+        "test_name": "Boundary + Operation",
+        "description": "Test + operation with boundary scenario",
+        "executor_agent": 1,
+        "status": "failed",
+        "error": "Message: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=140.0.7339.208)\nStacktrace:\n\tGetHandleVerifier [0x0x7ff6d9c81eb5+80197]\n\tGetHandleVerifier [0x0x7ff6d9c81f10+80288]\n\t(No symbol) [0x0x7ff6d9a002fa]\n\t(No symbol) [0x0x7ff6d99d82a1]\n\t(No symbol) [0x0x7ff6d9a8799e]\n\t(No symbol) [0x0x7ff6d9aa8132]\n\t(No symbol) [0x0x7ff6d9a80153]\n\t(No symbol) [0x0x7ff6d9a48b02]\n\t(No symbol) [0x0x7ff6d9a498d3]\n\tGetHandleVerifier [0x0x7ff6d9f3e83d+2949837]\n\tGetHandleVerifier [0x0x7ff6d9f38c6a+2926330]\n\tGetHandleVerifier [0x0x7ff6d9f586c7+3055959]\n\tGetHandleVerifier [0x0x7ff6d9c9cfee+191102]\n\tGetHandleVerifier [0x0x7ff6d9ca50af+224063]\n\tGetHandleVerifier [0x0x7ff6d9c8af64+117236]\n\tGetHandleVerifier [0x0x7ff6d9c8b119+117673]\n\tGetHandleVerifier [0x0x7ff6d9c710a8+11064]\n\tBaseThreadInitThunk [0x0x7ffd7da1e8d7+23]\n\tRtlUserThreadStart [0x0x7ffd7efe8d9c+44]\n",
+        "timestamp": "2025-09-26 20:49:09"
+      },
+      "validation": {
+        "verdict": "fail",
+        "evidence": [
+          "\u274c Test failed: Message: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=140.0.7339.208)\nStacktrace:\n\tGetHandleVerifier [0x0x7ff6d9c81eb5+80197]\n\tGetHandleVerifier [0x0x7ff6d9c81f10+80288]\n\t(No symbol) [0x0x7ff6d9a002fa]\n\t(No symbol) [0x0x7ff6d99d82a1]\n\t(No symbol) [0x0x7ff6d9a8799e]\n\t(No symbol) [0x0x7ff6d9aa8132]\n\t(No symbol) [0x0x7ff6d9a80153]\n\t(No symbol) [0x0x7ff6d9a48b02]\n\t(No symbol) [0x0x7ff6d9a498d3]\n\tGetHandleVerifier [0x0x7ff6d9f3e83d+2949837]\n\tGetHandleVerifier [0x0x7ff6d9f38c6a+2926330]\n\tGetHandleVerifier [0x0x7ff6d9f586c7+3055959]\n\tGetHandleVerifier [0x0x7ff6d9c9cfee+191102]\n\tGetHandleVerifier [0x0x7ff6d9ca50af+224063]\n\tGetHandleVerifier [0x0x7ff6d9c8af64+117236]\n\tGetHandleVerifier [0x0x7ff6d9c8b119+117673]\n\tGetHandleVerifier [0x0x7ff6d9c710a8+11064]\n\tBaseThreadInitThunk [0x0x7ffd7da1e8d7+23]\n\tRtlUserThreadStart [0x0x7ffd7efe8d9c+44]\n",
+          "\u274c No artifacts found",
+          "\u2139\ufe0f Cross-agent: No similar tests for comparison",
+          "\u26a0\ufe0f Repeat validation: Failed in 3/3 simulated reruns"
+        ],
+        "reproducibility": "1/1",
+        "triage_notes": [
+          "\ud83d\udea8 PRIORITY: Test failure requires investigation",
+          "\ud83d\udd27 Assigned to: QA Team #1",
+          "\ud83d\udccb Action: Review artifacts and debug"
+        ],
+        "validation_timestamp": "2025-09-26 20:49:16"
+      }
+    }
+  ]
+}
