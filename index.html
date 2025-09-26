@@ -7,10 +7,10 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
         }
         .container {
@@ -18,33 +18,33 @@
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            text-align: center;
         }
         h1 {
-            color: #ff6b6b;
-            font-size: 2.5em;
+            color: #333;
+            text-align: center;
             margin-bottom: 10px;
         }
         .subtitle {
             color: #666;
-            font-size: 1.2em;
+            text-align: center;
             margin-bottom: 30px;
+            font-size: 1.1em;
         }
         .button {
-            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            background: linear-gradient(45deg, #667eea, #764ba2);
             color: white;
-            padding: 15px 40px;
+            padding: 15px 30px;
             border: none;
-            border-radius: 50px;
-            font-size: 1.2em;
+            border-radius: 25px;
+            font-size: 16px;
             cursor: pointer;
-            margin: 20px;
+            margin: 10px;
             transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
         }
         .button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
         }
         .button:disabled {
             background: #ccc;
@@ -54,31 +54,49 @@
         }
         .results {
             margin-top: 30px;
-            text-align: left;
+            display: none;
+        }
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .summary-item {
             background: #f8f9fa;
             padding: 20px;
             border-radius: 10px;
-            border-left: 5px solid #ff6b6b;
+            text-align: center;
+            border-left: 4px solid #667eea;
+        }
+        .summary-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+            margin: 10px 0;
         }
         .test-result {
-            padding: 10px;
-            margin: 8px 0;
-            border-radius: 5px;
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #ddd;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        .passed {
-            background: #d4edda;
-            border-left: 4px solid #28a745;
+        .test-result.passed {
+            border-left-color: #28a745;
+            background: #f8fff9;
         }
-        .failed {
-            background: #f8d7da;
-            border-left: 4px solid #dc3545;
+        .test-result.failed {
+            border-left-color: #dc3545;
+            background: #fff8f8;
         }
         .status-badge {
-            padding: 4px 12px;
-            border-radius: 20px;
+            padding: 5px 15px;
+            border-radius: 15px;
             font-weight: bold;
             font-size: 0.9em;
         }
@@ -91,28 +109,26 @@
             color: white;
         }
         .loading {
-            color: #ff6b6b;
+            text-align: center;
+            padding: 30px;
+            color: #667eea;
             font-size: 1.1em;
-            margin: 20px 0;
         }
-        .summary {
-            display: flex;
-            justify-content: space-around;
-            margin: 20px 0;
-            flex-wrap: wrap;
-        }
-        .summary-item {
-            background: white;
+        .error {
+            background: #ffe6e6;
+            color: #dc3545;
             padding: 15px;
-            border-radius: 10px;
-            margin: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            min-width: 120px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid #dc3545;
         }
-        .summary-number {
-            font-size: 2em;
-            font-weight: bold;
-            color: #ff6b6b;
+        .success {
+            background: #e6ffe6;
+            color: #28a745;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid #28a745;
         }
     </style>
 </head>
@@ -121,37 +137,42 @@
         <h1>🎮 Multi-Agent Game Tester</h1>
         <div class="subtitle">Automated testing for math puzzle games using AI agents</div>
         
-        <button class="button" onclick="startTesting()">🚀 Start Automated Testing</button>
-        <button class="button" onclick="viewArtifacts()" id="artifactsBtn">📁 View Artifacts</button>
+        <div style="text-align: center;">
+            <button class="button" onclick="startTesting()">🚀 Start Automated Testing</button>
+            <button class="button" onclick="viewArtifacts()" id="artifactsBtn">📁 View Artifacts</button>
+        </div>
         
         <div id="loading" class="loading" style="display: none;">
             <h3>🔧 Testing in Progress...</h3>
-            <p>🤖Agents are working: Planner → Ranker → Executor → Analyzer</p>
-            <p> This may take 10-15 seconds. Please wait...</p>
+            <p>🤖 AI Agents are working: Planner → Ranker → Executor → Analyzer</p>
+            <p>⏳ Generating 25 test cases, selecting top 10, executing with 3 agents...</p>
+            <p>📊 This may take 30-45 seconds. Please wait...</p>
         </div>
         
-        <div id="results" style="display: none;">
-            <h2> Test Results Summary</h2>
+        <div id="results" class="results">
+            <div id="statusMessage"></div>
+            
+            <h2>📊 Test Results Summary</h2>
             <div class="summary">
                 <div class="summary-item">
-                    <div class="summary-number" id="totalTests">0</div>
                     <div>Total Tests</div>
+                    <div class="summary-number" id="totalTests">0</div>
                 </div>
                 <div class="summary-item">
-                    <div class="summary-number" id="passedTests">0</div>
                     <div>Passed</div>
+                    <div class="summary-number" id="passedTests">0</div>
                 </div>
                 <div class="summary-item">
-                    <div class="summary-number" id="failedTests">0</div>
                     <div>Failed</div>
+                    <div class="summary-number" id="failedTests">0</div>
                 </div>
                 <div class="summary-item">
-                    <div class="summary-number" id="successRate">0%</div>
                     <div>Success Rate</div>
+                    <div class="summary-number" id="successRate">0%</div>
                 </div>
             </div>
             
-            <h3> Detailed Test Results</h3>
+            <h3>📋 Detailed Test Results</h3>
             <div id="resultsContent"></div>
         </div>
     </div>
@@ -160,6 +181,7 @@
         async function startTesting() {
             const loading = document.getElementById('loading');
             const results = document.getElementById('results');
+            const statusMessage = document.getElementById('statusMessage');
             const resultsContent = document.getElementById('resultsContent');
             const artifactsBtn = document.getElementById('artifactsBtn');
             
@@ -167,60 +189,105 @@
             loading.style.display = 'block';
             results.style.display = 'none';
             artifactsBtn.disabled = true;
+            statusMessage.innerHTML = '';
+            resultsContent.innerHTML = '';
             
             try {
+                console.log('Starting testing...');
                 const response = await fetch('/api/start-testing');
                 const data = await response.json();
+                
+                console.log('Response received:', data);
                 
                 // Hide loading, show results
                 loading.style.display = 'none';
                 results.style.display = 'block';
                 artifactsBtn.disabled = false;
                 
-                displayResults(data);
+                if (data.status === 'success') {
+                    statusMessage.innerHTML = '<div class="success">✅ Testing completed successfully!</div>';
+                    displayResults(data.report);
+                } else {
+                    statusMessage.innerHTML = `<div class="error">❌ ${data.message || 'Testing failed'}</div>`;
+                }
+                
             } catch (error) {
+                console.error('Error:', error);
                 loading.style.display = 'none';
-                resultsContent.innerHTML = `<div style="color: red; padding: 20px; text-align: center;">
-                    <h3> Error</h3>
-                    <p>${error.message}</p>
-                </div>`;
+                statusMessage.innerHTML = `<div class="error">❌ Network error: ${error.message}</div>`;
                 results.style.display = 'block';
             }
         }
         
         function viewArtifacts() {
-            alert("📁 Artifacts are saved in the 'artifacts' folder!\n\nIncludes:\n• Test result JSON files\n• Error logs\n• Performance metrics\n• Screenshots (simulated)");
+            alert('📁 Artifacts are saved in the "artifacts" folder!\n\nIncludes:\n• Screenshots for each test\n• DOM snapshots\n• JSON reports\n• Performance metrics\n• Console logs');
         }
         
-        function displayResults(data) {
+        function displayResults(report) {
+            console.log('Displaying report:', report);
+            
+            // Update summary numbers
+            if (report && report.summary) {
+                document.getElementById('totalTests').textContent = report.summary.total_tests_executed || report.summary.total_tests || 0;
+                document.getElementById('passedTests').textContent = report.summary.passed_tests || report.summary.passed || 0;
+                document.getElementById('failedTests').textContent = report.summary.failed_tests || report.summary.failed || 0;
+                
+                const successRate = report.summary.success_rate || 
+                                  (report.summary.total_tests_executed ? 
+                                   Math.round((report.summary.passed_tests / report.summary.total_tests_executed) * 100) : 0);
+                document.getElementById('successRate').textContent = successRate + '%';
+            }
+            
             const resultsContent = document.getElementById('resultsContent');
             
-            if (data.report) {
-                const report = data.report;
-                
-                // Update summary numbers
-                document.getElementById('totalTests').textContent = report.summary.total_tests;
-                document.getElementById('passedTests').textContent = report.summary.passed;
-                document.getElementById('failedTests').textContent = report.summary.failed;
-                document.getElementById('successRate').textContent = report.summary.success_rate + '%';
-                
+            if (report && report.test_results) {
                 let html = '';
                 
-                // Display each test result
                 report.test_results.forEach((result, index) => {
-                    const test = result.test;
-                    const validation = result.validation;
+                    const test = result.test || result;
+                    const validation = result.validation || {};
                     
-                    const statusClass = test.status === 'passed' ? 'passed' : 'failed';
-                    const statusBadgeClass = test.status === 'passed' ? 'passed-badge' : 'failed-badge';
-                    const statusText = test.status === 'passed' ? 'PASS' : 'FAIL';
+                    const status = test.status || 'unknown';
+                    const statusClass = status === 'passed' ? 'passed' : 'failed';
+                    const statusText = status === 'passed' ? 'PASS' : 'FAIL';
+                    const statusBadgeClass = status === 'passed' ? 'passed-badge' : 'failed-badge';
                     
                     html += `
                         <div class="test-result ${statusClass}">
                             <div>
-                                <strong>#${index + 1}: ${test.test_name}</strong><br>
-                                <small>${test.description || 'No description'}</small><br>
-                                <small>Verdict: ${validation.verdict} | Reproducibility: ${validation.reproducibility}</small>
+                                <strong>#${index + 1}: ${test.test_name || test.name || 'Unknown Test'}</strong><br>
+                                <small>${test.description || 'No description available'}</small><br>
+                                <small>Executor: Agent ${test.executor_agent || 'N/A'} | 
+                                Verdict: ${validation.verdict || 'N/A'} | 
+                                Reproducibility: ${validation.reproducibility || 'N/A'}</small>
+                            </div>
+                            <span class="status-badge ${statusBadgeClass}">${statusText}</span>
+                        </div>
+                    `;
+                });
+                
+                resultsContent.innerHTML = html;
+                
+            } else if (report && report.detailed_results) {
+                let html = '';
+                
+                report.detailed_results.forEach((item, index) => {
+                    const test = item.test_information || item.test || {};
+                    const execution = item.execution_results || {};
+                    const validation = item.validation_results || item.validation || {};
+                    
+                    const status = execution.status || test.status || 'unknown';
+                    const statusClass = status === 'passed' ? 'passed' : 'failed';
+                    const statusText = status === 'passed' ? 'PASS' : 'FAIL';
+                    const statusBadgeClass = status === 'passed' ? 'passed-badge' : 'failed-badge';
+                    
+                    html += `
+                        <div class="test-result ${statusClass}">
+                            <div>
+                                <strong>#${index + 1}: ${test.test_name || test.name || 'Unknown Test'}</strong><br>
+                                <small>${test.description || 'No description available'}</small><br>
+                                <small>Agent: ${test.executing_agent || test.executor_agent || 'N/A'} | 
+                                Verdict: ${validation.verdict || 'N/A'}</small>
                             </div>
                             <span class="status-badge ${statusBadgeClass}">${statusText}</span>
                         </div>
@@ -229,7 +296,7 @@
                 
                 resultsContent.innerHTML = html;
             } else {
-                resultsContent.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+                resultsContent.innerHTML = '<div class="error">No test results available in the report format.</div>';
             }
         }
     </script>
