@@ -14,18 +14,27 @@ async def read_root():
 @app.get("/api/start-testing")
 async def start_testing():
     try:
-        print(" Starting multi-agent testing suite...")
+        print("🎯 Starting multi-agent testing suite...")
         orchestrator = OrchestratorAgent()
         report = orchestrator.run_full_test_suite()
         
-        return {
-            "status": "success",
-            "message": "Multi-agent testing completed successfully!",
-            "report": report
-        }
+        # Ensure the report has the expected structure
+        if report and 'summary' in report:
+            return {
+                "status": "success",
+                "message": "Multi-agent testing completed successfully!",
+                "report": report
+            }
+        else:
+            return {
+                "status": "error",
+                "message": "Report generation failed",
+                "report": None
+            }
+            
     except Exception as e:
         error_msg = f"Testing failed: {str(e)}"
-        print(f" {error_msg}")
+        print(f"❌ {error_msg}")
         return {
             "status": "error",
             "message": error_msg,
@@ -36,9 +45,16 @@ async def start_testing():
 async def get_report():
     try:
         with open("artifacts/comprehensive_test_report.json", "r", encoding="utf-8") as f:
-            return json.load(f)
-    except:
-        return {"error": "No report available. Please run tests first."}
+            report = json.load(f)
+            return {
+                "status": "success",
+                "report": report
+            }
+    except Exception as e:
+        return {
+            "status": "error", 
+            "message": f"No report available: {str(e)}"
+        }
 
 app.mount("/", StaticFiles(directory="frontend"), name="frontend")
 
